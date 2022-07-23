@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Progetto.PiantaService.pianta>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Piante</h2>
+
+
+@if (!Model.Any())
+{
+    <p>Non abbiamo alcuna pianta in vendita</p>
+}
+
+<table id="piante" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Codice Pianta</th>
+            <th>Nome Pianta</th>
+            <th>Taglia</th>
+            <th>Ordinata</th>
+            <th>Prezzo Pianta</th>
+            <th>Prezzo Lavoro</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pianta in Model)
+        {
+            <tr>
+                <td>@pianta.Id</td>
+                <td>@Html.ActionLink(pianta.nome, "Details", new { Id = pianta.Id })</td>
+                <td>@pianta.taglia cm</td>
+                <td>@pianta.ordinata</td>
+                <td>@pianta.prezzopianta€</td>
+                <td>@pianta.prezzolavoro€</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GiardiniereService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54270/GiardiniereService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54270/GiardiniereService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54270/GiardiniereService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGiardiniereService_findAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAll" />
+  </wsdl:message>
+  <wsdl:message name="IGiardiniereService_findAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGiardiniereService_find_InputMessage">
+    <wsdl:part name="parameters" element="tns:find" />
+  </wsdl:message>
+  <wsdl:message name="IGiardiniereService_find_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGiardiniereService_Addgiard_InputMessage">
+    <wsdl:part name="parameters" element="tns:Addgiard" />
+  </wsdl:message>
+  <wsdl:message name="IGiardiniereService_Addgiard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddgiardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGiardiniereService_visemail_InputMessage">
+    <wsdl:part name="parameters" element="tns:visemail" />
+  </wsdl:message>
+  <wsdl:message name="IGiardiniereService_visemail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:visemailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGiardiniereService">
+    <wsdl:operation name="findAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGiardiniereService/findAll" message="tns:IGiardiniereService_findAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGiardiniereService/findAllResponse" message="tns:IGiardiniereService_findAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGiardiniereService/find" message="tns:IGiardiniereService_find_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGiardiniereService/findResponse" message="tns:IGiardiniereService_find_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Addgiard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGiardiniereService/Addgiard" message="tns:IGiardiniereService_Addgiard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGiardiniereService/AddgiardResponse" message="tns:IGiardiniereService_Addgiard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="visemail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGiardiniereService/visemail" message="tns:IGiardiniereService_visemail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGiardiniereService/visemailResponse" message="tns:IGiardiniereService_visemail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGiardiniereService" type="tns:IGiardiniereService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findAll">
+      <soap:operation soapAction="http://tempuri.org/IGiardiniereService/findAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap:operation soapAction="http://tempuri.org/IGiardiniereService/find" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addgiard">
+      <soap:operation soapAction="http://tempuri.org/IGiardiniereService/Addgiard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="visemail">
+      <soap:operation soapAction="http://tempuri.org/IGiardiniereService/visemail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GiardiniereService">
+    <wsdl:port name="BasicHttpBinding_IGiardiniereService" binding="tns:BasicHttpBinding_IGiardiniereService">
+      <soap:address location="http://localhost:54270/GiardiniereService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

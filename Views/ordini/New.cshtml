@@ -1,0 +1,51 @@
+﻿@model Progetto.ViewModels.acquistopiantaViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Nuovo ordine</h2>
+<p>Per fare un ordine non basta fare il login. È necessario registrarsi come paesaggista</p>
+
+@using (Html.BeginForm("Create", "ordini"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ordine.termine)
+        @Html.TextBoxFor(m => m.ordine.termine, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ordine.termine)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ordine.latitudine)
+        @Html.TextBoxFor(m => m.ordine.latitudine, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ordine.latitudine)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ordine.longitudine)
+        @Html.TextBoxFor(m => m.ordine.longitudine, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ordine.longitudine)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ordine.piantaId)
+        @Html.DropDownListFor(m => m.ordine.piantaId, new SelectList(Model.Piante, "Id", "nome"), "Seleziona pianta", new { @class = "form-control" }) <!--l'oggetto new acconcia il textbox '-->
+        @Html.ValidationMessageFor(m => m.ordine.piantaId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ordine.paesaggistaId)
+        @Html.TextBoxFor(m => m.ordine.paesaggistaId, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ordine.paesaggistaId)
+    </div>
+
+    @Html.AntiForgeryToken();
+    <!--per evitare attacchi cross-site request forgery, creando un token e salvandolo come cookie nel computer dell'utente. quando utente fa una richiesta, se token(hidden field)
+        e cookie corrispondono ==> richiesta a buon fine-->
+    <button type="submit" class="btn btn-primary">ordina</button>
+}
+
+
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval") <!--per evitare round trip validation-->
+
+}

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Progetto.PaesaggistaService.paesaggista>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Paesaggisti</h2>
+
+<p>
+    @Html.ActionLink("Aggiungi Nuovo Paesaggista", "New", "paesaggisti", null, new { @class = "btn btn-primary" })
+</p>
+
+@if (!Model.Any())
+{
+    <p>Nessun paesaggista iscritto</p>
+}
+
+<table id="paesaggisti" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Idetificativo</th>
+            <th>EMAIL</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Elimina</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var paesaggista in Model)
+        {
+            <tr>
+                <td>@paesaggista.identificativo</td>
+                <td>@paesaggista.email</td>
+                <td>@paesaggista.nome</td>
+                <td>@paesaggista.cognome</td>
+                <td>
+                    <button data-paesaggista-id="@paesaggista.identificativo" class="btn-link js-delete">Elimina</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#paesaggisti").DataTable();
+
+            $("#paesaggisti").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                if (confirm("Desidera eliminare il paesaggista? ")) {
+                    $.ajax({
+                        url: "/api/paesaggisti/" + button.attr("data-paesaggista-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,7 @@
+PlantiLoc ha una vasta scelta di rare piante ordinabili tramite sito indicando le coordinate geografiche in cui si desidera che la pianta venga
+impiantata.
+Accedendo come paesaggista, posso scegliere una tra le piante disponibili tramite un menu a tendina.
+Scelta la pianta, inserisco le coordinate (latitudine, longitudine) in cui voglio che essa venga piantata e un temine
+(data con minimo 3 giorni di anticipo).
+Un giardiniere ha la possibilita di completare un ordine e trarre un guadagno in base alla taglia della pianta che deve impiantare.
+Solamente l'amministratore del sito (admin@progetto.com) ha la possibilità di apportare modifiche alle piante nel database.

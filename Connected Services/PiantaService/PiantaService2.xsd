@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfpianta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="pianta" nillable="true" type="tns:pianta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfpianta" nillable="true" type="tns:ArrayOfpianta" />
+  <xs:complexType name="pianta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ordinata" type="xs:boolean" />
+      <xs:element minOccurs="0" name="prezzolavoro" type="xs:double" />
+      <xs:element minOccurs="0" name="prezzopianta" type="xs:double" />
+      <xs:element minOccurs="0" name="taglia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="pianta" nillable="true" type="tns:pianta" />
+</xs:schema>

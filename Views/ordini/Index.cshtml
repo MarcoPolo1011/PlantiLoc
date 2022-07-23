@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Progetto.Models.ordine>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ordini</h2>
+
+
+@if (!Model.Any())
+{
+    <p>Non ci sono ordini</p>
+}
+
+
+
+<p>
+    @Html.ActionLink("Nuovo Ordine", "New", "ordini", null, new { @class = "btn btn-primary" })
+</p>
+
+
+
+<table id="ordini" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Codice ordine</th>
+            <th>Termine</th>
+            <th>Completato</th>
+            <th>Latitudine</th>
+            <th>Longitudine</th>
+            <th>Nome Pianta</th>
+            <th>Codice Pianta</th>
+            <th>Elimina</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ordine in Model)
+        {
+        <tr>
+            <td>@ordine.cod_ordine</td>
+            <td>@ordine.termine</td>
+            <td>@ordine.completato</td>
+            <td>@ordine.latitudine</td>
+            <td>@ordine.longitudine</td>
+            <td>@Html.ActionLink(ordine.pianta.nome, "PDetails", new { Id = ordine.pianta.Id })</td>
+            <td>@ordine.pianta.Id</td>
+            <td>
+                <button data-ordine-id="@ordine.cod_ordine" class="btn-link js-delete">Elimina</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+<!--uso jQuery-->
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#ordini").DataTable();
+
+            $("#ordini").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                if (confirm("Desidera cancellare l'ordine?")) {
+                    $.ajax({
+                        url: "/api/ordini/" + button.attr("data-ordine-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script> 
+}

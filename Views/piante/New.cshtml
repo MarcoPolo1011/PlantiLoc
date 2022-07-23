@@ -1,0 +1,34 @@
+﻿@model Progetto.PiantaService.pianta
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registro Nuova Pianta</h2>
+
+@using (Html.BeginForm("Create", "piante"))
+{
+    <!--actionresult Create che proviene dal contrller piante per instanziare nuova pianta nel database-->
+    <div class="form-group">
+        @Html.LabelFor(m => m.nome)
+        @Html.TextBoxFor(m => m.nome, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.nome)
+    </div>
+    <div class="form-group">
+        <label>taglia in centimetri</label>
+        @Html.TextBoxFor(m => m.taglia, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.taglia)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.prezzopianta)
+        @Html.TextBoxFor(m => m.prezzopianta, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.prezzopianta)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.prezzolavoro)
+        @Html.TextBoxFor(m => m.prezzolavoro, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.prezzolavoro)
+    </div>
+    @Html.AntiForgeryToken(); <!--per evitare attacchi cross-site request forgery-->
+    <button type="submit" class="btn btn-primary">aggiungi</button>
+}

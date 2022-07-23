@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Progetto.GiardiniereService.giardiniere>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Giardinieri</h2>
+
+@if (!Model.Any())
+{
+    <p>Nessun giardiniere iscritto</p>
+}
+
+
+<p>
+    @Html.ActionLink("Aggiungi Nuovo Giardiniere", "New", "giardinieri", null, new { @class = "btn btn-primary" })
+</p>
+
+
+
+<table id="giardinieri" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Matricola</th>
+            <th>Email</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Elimina</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var giardiniere in Model)
+        {
+            <tr>
+                <td>@giardiniere.MATgiard</td>
+                <td>@giardiniere.email</td>
+                <td>@giardiniere.nome</td>
+                <td>@giardiniere.cognome</td>
+                <td>
+                    <button data-giardiniere-id="@giardiniere.MATgiard" class="btn-link js-delete">Elimina</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<p>
+    @Html.ActionLink("completa un ordine", "giardselect", "ordini", null, new { @class = "btn btn-primary" })
+</p>
+<p>
+    @Html.ActionLink("Classifica Giardinieri", "infogiard", "ordini", null, new { @class = "btn btn-primary" })
+</p>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#giardinieri").DataTable();
+
+            $("#giardinieri").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                if (confirm("Desidera eliminare il giardiniere?")) {
+                    $.ajax({
+                        url: "/api/giardinieri/" + button.attr("data-giardiniere-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

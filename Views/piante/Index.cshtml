@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Progetto.PiantaService.pianta>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Piante</h2>
+
+<p>
+    @Html.ActionLink("Aggiungi Nuova Pianta", "New", "piante", null, new { @class = "btn btn-primary" })
+</p>
+
+@if (!Model.Any())
+{
+    <p>Non abbiamo alcuna pianta in vendita</p>
+}
+
+<table id="piante" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Codice Pianta</th>
+            <th>Nome Pianta</th>
+            <th>Taglia</th>
+            <th>Ordinata</th>
+            <th>Prezzo Pianta</th>
+            <th>Prezzo Lavoro</th>
+            <th>Elimina</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pianta in Model)
+        {
+            <tr>
+                <td>@pianta.Id</td>
+                <td>@Html.ActionLink(pianta.nome, "Details", new { Id = pianta.Id })</td>
+                <td>@pianta.taglia cm</td>
+                <td>@pianta.ordinata</td>
+                <td>@pianta.prezzopianta€</td>
+                <td>@pianta.prezzolavoro€</td>
+                <td>
+                    <button data-pianta-id="@pianta.Id" class="btn-link js-delete">Elimina</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#piante").DataTable();
+
+            $("#piante").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                if (confirm("Desidera eliminare la pianta?")) {
+                    $.ajax({
+                        url: "/api/piante/" + button.attr("data-pianta-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

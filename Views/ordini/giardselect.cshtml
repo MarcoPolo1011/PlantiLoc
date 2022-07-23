@@ -1,0 +1,71 @@
+﻿@model Progetto.ViewModels.acquistopiantaViewModel
+
+@{
+    ViewBag.Title = "giardselect";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Selezioni l'ordine che desidera prendersi in carico</h2>
+
+
+
+@using (Html.BeginForm("Complete", "ordini"))
+{
+    <table id="ordini" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Codice ordine</th>
+                <th>Termine</th>
+                <th>Completato</th>
+                <th>Latitudine</th>
+                <th>Longitudine</th>
+                <th>Nome Pianta</th>
+                <th>Codice Pianta</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ordine in Model.Ordini)
+            {
+                if (ordine.completato == false)
+                {
+                    <tr>
+                        <td>@ordine.cod_ordine</td>
+                        <td>@ordine.termine</td>
+                        <td>@ordine.completato</td>
+                        <td>@ordine.latitudine</td>
+                        <td>@ordine.longitudine</td>
+                        <td>@Html.ActionLink(ordine.pianta.nome, "PDetails", new { Id = ordine.pianta.Id })</td>
+                        <td>@ordine.pianta.Id</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <label>Codice ordine che desidera svolgere</label>
+        @Html.TextBoxFor(m => m.ordine.cod_ordine, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ordine.cod_ordine)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.giardiniere.MATgiard)
+        @Html.TextBoxFor(m => m.giardiniere.MATgiard, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.giardiniere.MATgiard)
+    </div>
+
+    //@Html.AntiForgeryToken();
+
+    <button type="submit" class="btn btn-primary">register</button>
+
+
+}
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval") <!--per evitare round trip validation-->
+}

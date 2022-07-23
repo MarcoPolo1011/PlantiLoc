@@ -1,0 +1,17 @@
+﻿@model Progetto.Models.ordine
+@{
+    ViewBag.Title = "Complete";
+}
+
+<h2>La preghiamo di proseguire con la realizzazione dell' ordine @Model.cod_ordine</h2>
+
+
+<ul>
+    <li>Termine: @Model.termine</li>
+    <li>lat: @Model.latitudine</li>
+    <li>long: @Model.longitudine</li>
+    <li>Codice Pianta: @Model.piantaId</li>
+    <li>Nome Pianta: @Model.pianta.nome</li>
+    <li>Guadagno: @Model.pianta.prezzolavoro €</li>
+    <li>MAT Giardiniere: @Model.giardiniereId</li>
+</ul>
