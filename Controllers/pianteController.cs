@@ -17,6 +17,17 @@ namespace Progetto.Controllers
     {
         private PiantaServiceClient psc = new PiantaServiceClient();
 
+        private ApplicationDbContext _context;
+        public pianteController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public ActionResult Index()
         {
             var piante = psc.findAll();
@@ -35,6 +46,16 @@ namespace Progetto.Controllers
             psc.Close();
             if (pianta == null)
                 return HttpNotFound();
+
+            /*var plant = _context.ordines.Include(o => o.pianta).Where(o => o.piantaId == Id)  //non funziona perche pianta non ha ordine come foreign key
+                .GroupBy(g => new { g.piantaId, g.latitudine , g.longitudine})
+                .Select(grp => new piaVM
+                {
+                    plantId = (int)grp.Key.piantaId,
+                    latitudine = grp.Key.latitudine,
+                    longitudine = grp.Key.longitudine,
+                });
+            return View(plant.AsNoTracking().ToString());*/
 
             return Content(pianta.nome + "<br />" + pianta.ordinata + "<br />" + pianta.prezzopianta + "<br />" + pianta.prezzolavoro + "<br />" + pianta.taglia);
         }

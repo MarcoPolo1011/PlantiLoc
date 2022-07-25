@@ -1,0 +1,27 @@
+﻿@model Progetto.ViewModels.piaVM
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Classifica Giardinieri</h2>
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>pianta</th>
+            <th>Latitudine</th>
+            <th>Longitudine</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>@Model.plantId</td>
+            <td>@Model.latitudine</td>
+            <td>@Model.longitudine</td>
+        </tr>
+        
+    </tbody>
+</table>

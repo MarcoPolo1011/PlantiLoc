@@ -7,7 +7,6 @@ using System.Runtime.Serialization;
 
 namespace Progetto.Models
 {
-    [Serializable]
     public class pianta
     {
         [Key]

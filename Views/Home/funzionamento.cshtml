@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "funzionamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Funzionamento</h2>
+
+
+<ul style=“list-style-type:square”>
+
+    <li>login obbligatorio (disponibile grazie a authentication: individual user accounts)</li>
+
+    <li>bisogna registrarsi come paesaggista/giardiniere/entrambi</li>
+
+    <li>paesaggisti: ordiniano piante indicando coordinate geografiche in cui desiderano che esse vengano piantate e temine (data con minimo 3 giorni di preavviso)</li>
+
+    <li>giardinieri: si registrano ad un ordine per portarlo a termine trarne un guadagno in base alla taglia della pianta che devono impiantare</li>
+
+    <li>Solamente l'amministratore del sito (admin@progetto.com, user con ruolo "CanManagePlants") ha la possibilità di apportare modifiche alle piante nel database (aggiungere/rimuovere pianta).</li>
+
+    <li>disponibile calssifica di giardinieri indicante per ciascun giardiniere il numero di ordini eseguiti e guadagno totale</li>
+
+    <li>disponibile calssifica di paesaggisti indicante per ciascun paesaggista il numero di ordini commessi e spesa totale</li>
+
+    <li>ordini, piante (solo admin), giardinieri e paesaggisti possono venire agguinti ed eliminati</li>
+
+    <li>possibilità di accedere con facebook</li>
+
+    <li>le tabelle comprendono una barra di ricerca ed  è possibile anche ordinare i record dalla tabella in base al campo (colonna) su cui clicco</li>
+
+    <li>uso di servizi WCF per ottenere/aggiungere dati</li>
+
+    <li>gestione degli errori nel caso in cui i dati inseriti da un utente non siano ammissibili</li>
+
+    <li>Esempio: nel caso in cui un giardiniere voglia prendersi carico di un ordine già preso in carico da un altro giardiniere, gli verrà comunicato che tale ordine è già stato preso in carico</li>
+
+    <li>Esempio: nel caso in cui un paesaggista voglia ordinare una pianta con un termine minore di 3 giorni, gli verrà comunicato sotto il textbox che sono richiesti miinmo 3 giorni preavviso dalla data odierna</li>
+
+    <li>approccio code first</li>
+
+    <li>code first migrations per evolvere il database dell'applicazione</li>
+
+
+</ul>

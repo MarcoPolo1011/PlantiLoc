@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="58c1dd14-4405-475a-a1f5-1b995f9936ed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8880fe89-f78d-4f18-82e8-d8282afef759" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:54270/GiardiniereService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GiardiniereService.xsd" MetadataType="Schema" ID="a5e0398f-f8ec-4cab-9bcd-36f3c2cb4d7d" SourceId="1" SourceUrl="http://localhost:54270/GiardiniereService.svc?xsd=xsd0" />
-    <MetadataFile FileName="GiardiniereService1.xsd" MetadataType="Schema" ID="82510c70-cd43-457f-b87f-23d491458699" SourceId="1" SourceUrl="http://localhost:54270/GiardiniereService.svc?xsd=xsd1" />
-    <MetadataFile FileName="GiardiniereService.wsdl" MetadataType="Wsdl" ID="90415e67-1a62-4614-b0e0-ddf99c3c6080" SourceId="1" SourceUrl="http://localhost:54270/GiardiniereService.svc?wsdl" />
-    <MetadataFile FileName="GiardiniereService2.xsd" MetadataType="Schema" ID="ee094686-daa8-4783-8d01-bc3d1cde15e6" SourceId="1" SourceUrl="http://localhost:54270/GiardiniereService.svc?xsd=xsd2" />
+    <MetadataFile FileName="GiardiniereService.xsd" MetadataType="Schema" ID="2eec2c12-a276-4a72-9278-d56e999d34b0" SourceId="1" SourceUrl="http://localhost:54270/GiardiniereService.svc?xsd=xsd0" />
+    <MetadataFile FileName="GiardiniereService1.xsd" MetadataType="Schema" ID="3b3dba25-72af-4864-923c-6ca8810dd229" SourceId="1" SourceUrl="http://localhost:54270/GiardiniereService.svc?xsd=xsd1" />
+    <MetadataFile FileName="GiardiniereService.wsdl" MetadataType="Wsdl" ID="1fe802a5-1810-49a6-b5c8-013e55e3b89a" SourceId="1" SourceUrl="http://localhost:54270/GiardiniereService.svc?wsdl" />
+    <MetadataFile FileName="GiardiniereService2.xsd" MetadataType="Schema" ID="53030841-828f-492a-acbf-f30752b08c06" SourceId="1" SourceUrl="http://localhost:54270/GiardiniereService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

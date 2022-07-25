@@ -11,7 +11,7 @@ namespace WcfService1
     // NOTE: In order to launch WCF Test Client for testing this service, please select PiantaService.svc or PiantaService.svc.cs at the Solution Explorer and start debugging.
     public class PiantaService : IPiantaService
     {
-        private DefaultConnectionEntities2 dce = new DefaultConnectionEntities2();
+        private DefaultConnectionEntities5 dce = new DefaultConnectionEntities5();
 
         public pianta find(int id)
         {

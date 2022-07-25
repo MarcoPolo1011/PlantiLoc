@@ -31,7 +31,7 @@
           <Property Name="nome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="cognome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="DefaultConnectionEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DefaultConnectionEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="paesaggistas" EntityType="Self.paesaggista" />
         </EntityContainer>
       </Schema>
@@ -39,7 +39,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DefaultConnectionModel1StoreContainer" CdmEntityContainer="DefaultConnectionEntities1">
+        <EntityContainerMapping StorageEntityContainer="DefaultConnectionModel1StoreContainer" CdmEntityContainer="DefaultConnectionEntities4">
           <EntitySetMapping Name="paesaggistas">
             <EntityTypeMapping TypeName="DefaultConnectionModel1.paesaggista">
               <MappingFragment StoreEntitySet="paesaggistas">

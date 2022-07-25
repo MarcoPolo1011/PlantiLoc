@@ -5,12 +5,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Progetto.Models
+namespace Progetto.ViewModels
 {
-    public class giardiniere
+    public class riassunpoPaes
     {
         [Key]
-        public int MATgiard { get; set; }
+        public int ID { get; set; }
 
         [Required(ErrorMessage = "email is required")]
         [DataType(DataType.EmailAddress)]
@@ -19,6 +19,7 @@ namespace Progetto.Models
         public string email { get; set; }
         public string nome { get; set; }
         public string cognome { get; set; }
+        public int noexe { get; set; }
+        public double spesa { get; set; }
     }
-
 }

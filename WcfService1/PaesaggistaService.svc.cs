@@ -11,7 +11,8 @@ namespace WcfService1
     // NOTE: In order to launch WCF Test Client for testing this service, please select PaesaggistaService.svc or PaesaggistaService.svc.cs at the Solution Explorer and start debugging.
     public class PaesaggistaService : IPaesaggistaService
     {
-        private DefaultConnectionEntities1 dce = new DefaultConnectionEntities1();
+
+        private DefaultConnectionEntities4 dce = new DefaultConnectionEntities4();
 
         public paesaggista find(int id)
         {

@@ -1,0 +1,62 @@
+﻿@model Progetto.Models.pianta
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dettagli Pianta</h2>
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Codice pianta</th>
+            <th>Nome</th>
+            <th>Prezzo Pianta</th>
+            <th>Prezzo Lavoro</th>
+            <th>Taglia</th>
+            <th>Ordinata</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.nome</td>
+            <td>@Model.prezzopianta €</td>
+            <td>@Model.prezzolavoro €</td>
+            <td>@Model.taglia cm</td>
+            <td>@Model.ordinata</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+<p>
+    @Html.ActionLink("Ritorna agli ordini", "Index", "ordini", null, new { @class = "btn btn-primary" })
+</p>
+
+
+<style>
+
+    table, td, th {
+    }
+
+    thead {
+        float: left;
+    }
+
+        thead th {
+            display: block;
+        }
+
+    tbody {
+        float: left;
+    }
+
+        tbody td {
+            display: block;
+            background: yellow;
+        }
+</style>

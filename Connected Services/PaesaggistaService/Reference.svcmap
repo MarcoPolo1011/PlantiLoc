@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2b41e5c1-e9b7-48d1-be42-58037287815c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7a715949-fcc1-4fec-952d-9c99eb00ac6d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:54270/PaesaggistaService.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:54270/PaesaggistaService.svc?singleWsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PaesaggistaService.xsd" MetadataType="Schema" ID="afc334dc-5a5d-4bf8-80c2-bcd91886b3f2" SourceId="1" SourceUrl="http://localhost:54270/PaesaggistaService.svc?xsd=xsd0" />
-    <MetadataFile FileName="PaesaggistaService1.xsd" MetadataType="Schema" ID="438d1c16-bdce-4de0-8029-992d21f221f3" SourceId="1" SourceUrl="http://localhost:54270/PaesaggistaService.svc?xsd=xsd1" />
-    <MetadataFile FileName="PaesaggistaService.wsdl" MetadataType="Wsdl" ID="4ecf4e1c-e600-4917-9ab3-657fa3cf8c88" SourceId="1" SourceUrl="http://localhost:54270/PaesaggistaService.svc?wsdl" />
-    <MetadataFile FileName="PaesaggistaService2.xsd" MetadataType="Schema" ID="f2bfb639-d8cc-4e29-b81f-1cb6e5d9ee2c" SourceId="1" SourceUrl="http://localhost:54270/PaesaggistaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PaesaggistaService.wsdl" MetadataType="Wsdl" ID="01c18c32-8ad7-41f6-9fa8-cf1b7c178c4d" SourceId="1" SourceUrl="http://localhost:54270/PaesaggistaService.svc?singleWsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

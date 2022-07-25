@@ -26,5 +26,15 @@ namespace Progetto.Controllers
 
             return View();
         }
+
+        public ActionResult funzionamento()
+        {
+            return View();
+        }
+
+        public ActionResult SchemaConcettuale()
+        {
+            return View();
+        }
     }
 }

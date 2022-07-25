@@ -1,7 +1,25 @@
 PlantiLoc ha una vasta scelta di rare piante ordinabili tramite sito indicando le coordinate geografiche in cui si desidera che la pianta venga
 impiantata.
-Accedendo come paesaggista, posso scegliere una tra le piante disponibili tramite un menu a tendina.
-Scelta la pianta, inserisco le coordinate (latitudine, longitudine) in cui voglio che essa venga piantata e un temine
+Accedendo come paesaggista, posso ordinare una tra le piante disponibili tramite un menu a tendina.
+per ordinare la pianta, devo inserire le coordinate (latitudine, longitudine) in cui voglio che essa venga piantata e un temine
 (data con minimo 3 giorni di anticipo).
 Un giardiniere ha la possibilita di completare un ordine e trarre un guadagno in base alla taglia della pianta che deve impiantare.
-Solamente l'amministratore del sito (admin@progetto.com) ha la possibilità di apportare modifiche alle piante nel database.
+Solamente l'amministratore del sito (admin@progetto.com) ha la possibilità di apportare modifiche alle piante nel database (aggiungere e rimuovere pianta).
+È obbligatorio fare il login al sito per autenticarsi (ciò reso disponibile da authentication: individual user accounts.)
+Dopodichè, ci si può registrare come paesaggista, giardiniere o entrambe.
+I paesaggisti hanno la possibilità di ordinare piante indicando le coordinate geografiche in cui desiderano che esse vangano piantate e un temine
+(data con minimo 3 giorni di anticipo). I giardinieri possono completare degli ordini e trarre un guadagno in base alla taglia della pianta che devono impiantare.
+
+- login obligatorio (disponibile grazie a authentication: individual user accounts)
+- registrarsi come paesaggista/giardiniere/entrambi
+- paesaggisti: ordiniano piante indicando coordinate geografiche in cui si desidera che la pianta venga impiantata e temine (data con minimo 3 giorni di anticipo)
+- giardinieri: portano a termine ordini per trarne un guadagno in base alla taglia della pianta che devono impiantare
+- Solamente l'amministratore del sito (admin@progetto.com) ha la possibilità di apportare modifiche alle piante nel database (aggiungere e rimuovere pianta) (user con ruolo "CanManagePlants").
+- disponibile calssifica di giardinieri indicante per ciascun giardiniere il numero di ordini eseguiti e guadagno totale
+- disponibile calssifica di paesaggisti indicante per ciascun paesaggista il numero di ordini commessi e spesa totale
+- ordini, piante (solo admin), giardinieri e paesaggisti possono venire agguinti e anche eliminati
+- possibilità di accedere con facebook
+- tabelle con barra di ricerca
+- mappa di google maps in cui posso cliccare su esatto punto della mappa per ottenere esatte coordinate
+- uso di servizi WCF per ottenere/aggiungere dati
+- gestione degli errori nel caso in cui i dati inseriti da un utente non siano ammissibili

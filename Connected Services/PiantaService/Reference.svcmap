@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5460e9c2-cdc2-4463-b75c-313585172425" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0f30af98-6eae-4076-9dfb-eb4e7bf515ff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:54270/PiantaService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PiantaService.xsd" MetadataType="Schema" ID="985df968-62ee-40ff-9ffc-1df9ac2f706a" SourceId="1" SourceUrl="http://localhost:54270/PiantaService.svc?xsd=xsd0" />
-    <MetadataFile FileName="PiantaService1.xsd" MetadataType="Schema" ID="eccf0c9a-9d79-433b-97b0-9d4192a5d00b" SourceId="1" SourceUrl="http://localhost:54270/PiantaService.svc?xsd=xsd1" />
-    <MetadataFile FileName="PiantaService2.xsd" MetadataType="Schema" ID="23c4768d-0c87-426c-9ee7-dd8d6bb247a6" SourceId="1" SourceUrl="http://localhost:54270/PiantaService.svc?xsd=xsd2" />
-    <MetadataFile FileName="PiantaService.wsdl" MetadataType="Wsdl" ID="377865ed-cff8-49f8-adef-10b2b6564cbf" SourceId="1" SourceUrl="http://localhost:54270/PiantaService.svc?wsdl" />
+    <MetadataFile FileName="PiantaService.xsd" MetadataType="Schema" ID="540df4b4-d8cc-4c7d-a2c4-b479659e8628" SourceId="1" SourceUrl="http://localhost:54270/PiantaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PiantaService1.xsd" MetadataType="Schema" ID="31cae88c-b75d-4554-8b2e-d3c238d04cee" SourceId="1" SourceUrl="http://localhost:54270/PiantaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PiantaService2.xsd" MetadataType="Schema" ID="c3bb678e-7c11-4a5f-8b42-cb61c5a17641" SourceId="1" SourceUrl="http://localhost:54270/PiantaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PiantaService.wsdl" MetadataType="Wsdl" ID="ff61cc94-309f-45d5-8d38-c8cfaca7f41f" SourceId="1" SourceUrl="http://localhost:54270/PiantaService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

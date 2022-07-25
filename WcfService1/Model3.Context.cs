@@ -13,10 +13,10 @@ namespace WcfService1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DefaultConnectionEntities2 : DbContext
+    public partial class DefaultConnectionEntities5 : DbContext
     {
-        public DefaultConnectionEntities2()
-            : base("name=DefaultConnectionEntities2")
+        public DefaultConnectionEntities5()
+            : base("name=DefaultConnectionEntities5")
         {
         }
     

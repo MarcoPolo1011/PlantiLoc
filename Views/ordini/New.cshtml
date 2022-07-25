@@ -5,7 +5,7 @@
 }
 
 <h2>Nuovo ordine</h2>
-<p>Per fare un ordine non basta fare il login. È necessario registrarsi come paesaggista</p>
+<p style="font-size:14px; color:firebrick;">Per ordinare una pianta, inoltre a fare il login, è necessario registrarsi come paesaggista!</p>
 
 @using (Html.BeginForm("Create", "ordini"))
 {
@@ -36,12 +36,14 @@
     </div>
 
     @Html.AntiForgeryToken();
-    <!--per evitare attacchi cross-site request forgery, creando un token e salvandolo come cookie nel computer dell'utente. quando utente fa una richiesta, se token(hidden field)
+    <!--per evitare attacchi cross-site request forgery: creando un token e salvandolo come cookie nel computer dell'utente. quando utente fa una richiesta, se token(hidden field)
         e cookie corrispondono ==> richiesta a buon fine-->
     <button type="submit" class="btn btn-primary">ordina</button>
 }
 
 
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 
 
 @section scripts

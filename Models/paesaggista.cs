@@ -9,7 +9,6 @@ using System.Web.Mvc;
 
 namespace Progetto.Models
 {
-    [Serializable]
     public class paesaggista
     {
         [Key]

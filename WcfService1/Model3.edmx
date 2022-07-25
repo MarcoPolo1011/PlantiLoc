@@ -35,7 +35,7 @@
           <Property Name="prezzopianta" Type="Double" Nullable="false" />
           <Property Name="prezzolavoro" Type="Double" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DefaultConnectionEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DefaultConnectionEntities5" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="piantas" EntityType="Self.pianta" />
         </EntityContainer>
       </Schema>
@@ -43,7 +43,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DefaultConnectionModel2StoreContainer" CdmEntityContainer="DefaultConnectionEntities2">
+        <EntityContainerMapping StorageEntityContainer="DefaultConnectionModel2StoreContainer" CdmEntityContainer="DefaultConnectionEntities5">
           <EntitySetMapping Name="piantas">
             <EntityTypeMapping TypeName="DefaultConnectionModel2.pianta">
               <MappingFragment StoreEntitySet="piantas">

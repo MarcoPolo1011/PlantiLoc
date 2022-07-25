@@ -9,7 +9,6 @@ using System.Web;
 
 namespace Progetto.Models
 {
-    [Serializable]
     public class ordine
     {
         [Key]

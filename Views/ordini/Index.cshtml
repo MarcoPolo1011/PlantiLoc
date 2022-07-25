@@ -30,6 +30,8 @@
             <th>Longitudine</th>
             <th>Nome Pianta</th>
             <th>Codice Pianta</th>
+            <th>Matricola Paesaggista</th>
+            <th>Matricola Giardiniere</th>
             <th>Elimina</th>
 
 
@@ -46,6 +48,8 @@
             <td>@ordine.longitudine</td>
             <td>@Html.ActionLink(ordine.pianta.nome, "PDetails", new { Id = ordine.pianta.Id })</td>
             <td>@ordine.pianta.Id</td>
+            <td>@ordine.paesaggista.email</td>
+            <td>@ordine.giardiniereId</td>
             <td>
                 <button data-ordine-id="@ordine.cod_ordine" class="btn-link js-delete">Elimina</button>
             </td>
