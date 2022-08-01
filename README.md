@@ -25,6 +25,8 @@ Ho usato i seguenti stumenti:
 	
 	- LINQ (funzionalità query)
 	
+	- JQuery (gesttione aspetti grafici e strutturali)
+	
 	- Entity Framework (funzionalità di accesso ai dati)
 	
 	- Console di gestione pacchetti Nuget (per digitare comandi e istallare pacchetti)
