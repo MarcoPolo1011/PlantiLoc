@@ -71,6 +71,6 @@ Descrizione Funzionamento:
 	
 	•Gestione degli errori nel caso in cui i dati inseriti da un utente non siano ammissibili
 	
-	•Esempio: nel caso in cui un giardiniere voglia prendersi carico di un ordine già preso in carico da un altro giardiniere, gli verrà comunicato che tale 	ordine è già stato preso in carico
+	•Esempio: nel caso in cui un giardiniere voglia prendersi carico di un ordine già preso in carico da un altro giardiniere, gli verrà comunicato che tale ordine è già stato preso in carico
 	
-	•Esempio: nel caso in cui un paesaggista voglia ordinare una pianta con un termine minore di 3 giorni, gli verrà comunicato sotto il textbox che sono 		richiesti minimo 3 giorni di preavviso dalla data odierna
+	•Esempio: nel caso in cui un paesaggista voglia ordinare una pianta con un termine minore di 3 giorni, gli verrà comunicato sotto il textbox che sono 	richiesti minimo 3 giorni di preavviso dalla data odierna
