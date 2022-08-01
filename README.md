@@ -55,7 +55,7 @@ Descrizione Funzionamento:
 	
 	•Giardinieri: si registrano ad un ordine per portarlo a termine trarne un guadagno in base alla taglia della pianta che devono impiantare
 	
-	•Solamente l'amministratore del sito (admin@progetto.com, user con ruolo "CanManagePlants") ha la possibilità di apportare modifiche alle piante nel 		database (aggiungere/rimuovere pianta).
+	•Solamente l'amministratore del sito (admin@progetto.com, user con ruolo "CanManagePlants") ha la possibilità di apportare modifiche alle piante nel database (aggiungere/rimuovere pianta).
 	
 	•Classifica di giardinieri indicante per ciascun giardiniere il numero di ordini eseguiti e guadagno totale
 	
@@ -73,4 +73,4 @@ Descrizione Funzionamento:
 	
 	•Esempio: nel caso in cui un giardiniere voglia prendersi carico di un ordine già preso in carico da un altro giardiniere, gli verrà comunicato che tale ordine è già stato preso in carico
 	
-	•Esempio: nel caso in cui un paesaggista voglia ordinare una pianta con un termine minore di 3 giorni, gli verrà comunicato sotto il textbox che sono 	richiesti minimo 3 giorni di preavviso dalla data odierna
+	•Esempio: nel caso in cui un paesaggista voglia ordinare una pianta con un termine minore di 3 giorni, gli verrà comunicato sotto il textbox che sono richiesti minimo 3 giorni di preavviso dalla data odierna
