@@ -13,18 +13,31 @@ Descrizione degli strumenti usati:
 Il progetto è basato sul linguaggio di programmazione C#. C# è stato sviluppato da Microsoft e supporta tutti i concetti della programmazione orientata agli oggetti.
 
 Ho usato i seguenti stumenti:
+
 	- PC con windows 11
+	
 	- C#  (linguaggio di programmazione usato per scrivere gran parte dell’applicazione)
+	
 	- JavaScript  (linguaggio di programmazione usato per interagire con pagine web)
+	
 	- CSS  (linguaggio di programmazione usato per definire la formattazione di documenti HTML)
+	
 	- LINQ (funzionalità query)
+	
 	- Entity Framework (funzionalità di accesso ai dati)
+	
 	- Console di gestione pacchetti Nuget (per digitare comandi e istallare pacchetti)
+	
 	- VisualStudio Enterprise 2019 (ambiente di sviluppo)
+	
 	- Microsoft SQL Server con Microsoft SQL server management studio (per avere un Database comunicante con l’applicazione asp.net MVC)
+	
 	- GitHub (per creare repository contenente il progetto)
+	
 	- Migrations (consente di usare approccio code-first per l’evoluzione del database)
+	
 	- Servizi WCF (per consentire comunicazione tra le entità)
+	
 	- Google API (per incorporare mappa e visualizzazione coordinate onclick)
 
 
